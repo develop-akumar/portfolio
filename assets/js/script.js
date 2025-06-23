@@ -59,7 +59,7 @@ $(document).ready(function () {
 document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {
-            document.title = "Portfolio | Jigar Sable";
+            document.title = "Portfolio | Arvind Kr Chaurasia";
             $("#favicon").attr("href", "assets/images/favicon.png");
         }
         else {
@@ -149,6 +149,7 @@ function showProjects(projects) {
 }
 
 fetchData().then(data => {
+    console.log('data = ', data);
     showSkills(data);
 });
 
