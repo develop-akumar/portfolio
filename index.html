@@ -445,6 +445,7 @@
     // const isLoca = location.hostname === "localhost" || location.hostname === "127.0.0.1";
     // base.href = isLocal ? "/" : "/portfolio/"; // Change this to your repo name
     const basePath = isLocal ? "" : "/portfolio";
+    
     // Fix all anchor links starting with "/"
     document.querySelectorAll('a[href^="/"]').forEach(link => {
       const originalHref = link.getAttribute('href');
@@ -452,6 +453,8 @@
       console.log('originalHref = ', originalHref);
       link.setAttribute('href', basePath + originalHref);
     });
+
+    
   </script>
 
 </body>
@@ -533,11 +536,5 @@
     //     "name": "WordPress",
     //     "icon": "https://img.icons8.com/color/48/000000/wordpress.png"
     // }    
-
-
-
-
-
-
 
 -->
