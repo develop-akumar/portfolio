@@ -25,6 +25,18 @@
   <!-- Favicon -->
   <link id='favicon' rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-png">
   <title>Portfolio | Arvind Kumar</title>
+
+  <script>
+    // Set base path depending on environment
+    // const isLoca = location.hostname === "localhost" || location.hostname === "127.0.0.1";
+    // base.href = isLocal ? "/" : "/portfolio/"; // Change this to your repo name
+
+    // Fix all anchor links starting with "/"
+    document.querySelectorAll('a[href^="/"]').forEach(link => {
+      const originalHref = link.getAttribute('href');
+      link.setAttribute('href', basePath + originalHref);
+    });
+  </script>
 </head>
 
 <body oncontextmenu="return false">
