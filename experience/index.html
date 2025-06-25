@@ -3,13 +3,7 @@
 
 <head>
 
-  <script>
-    // Set base path depending on environment
-    const isLocal = location.hostname === "localhost" || location.hostname === "127.0.0.1";
-    const base = document.createElement("base");
-    base.href = isLocal ? "/" : "/portfolio/"; // Change this to your repo name
-    // document.head.appendChild(base);
-  </script>
+ 
 
 
   <meta charset="UTF-8">
@@ -23,6 +17,14 @@
   <link id='favicon' rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-png">
 
   <title>Experience | Portfolio Arvind Kr Chaurasia</title>
+   <script>
+    // Set base path depending on environment
+    const isLocal = location.hostname === "localhost" || location.hostname === "127.0.0.1";
+    const base = document.createElement("base");
+    base.href = isLocal ? "/" : "/portfolio/"; // Change this to your repo name
+    document.head.appendChild(base);
+  </script>
+
 </head>
 
 <body oncontextmenu="return false">

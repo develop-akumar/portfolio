@@ -445,15 +445,15 @@
     base.href = isLocal ? "/" : "/portfolio/"; // Change this to your repo name
     const basePath = isLocal ? "" : "/portfolio";
 
-    setTimeout(() => {
-      document.querySelectorAll('a[href^="/"]').forEach(link => {
-        const originalHref = link.getAttribute('href');
-        console.log('originalHref = ', originalHref);
-        console.log("\n basePath = ", basePath)
-        console.log(' final path = ', basePath + originalHref);
-        link.setAttribute('href', basePath + originalHref);
-      });
-    }, 1000)
+
+    document.querySelectorAll('a[href^="/"]').forEach(link => {
+      const originalHref = link.getAttribute('href');
+      console.log('originalHref = ', originalHref);
+      console.log("\n basePath = ", basePath)
+      console.log(' final path = ', basePath + originalHref);
+      link.setAttribute('href', basePath + originalHref);
+    });
+
     // Fix all anchor links starting with "/"
 
 
