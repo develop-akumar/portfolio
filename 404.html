@@ -133,8 +133,9 @@
     // Fix all anchor links starting with "/"
     document.querySelectorAll('a[href^="/"]').forEach(link => {
       const originalHref = link.getAttribute('href');
-      console.log("basePath = ", basePath)
+      console.log("\n basePath = ", basePath)
       console.log('originalHref = ', originalHref);
+      console.log(' final path = ', basePath + originalHref );
       link.setAttribute('href', basePath + originalHref);
     });
 
