@@ -3,13 +3,13 @@
 
 <head>
 
-  <!-- <script>
+  <script>
     // Set base path depending on environment
     const isLocal = location.hostname === "localhost" || location.hostname === "127.0.0.1";
     const base = document.createElement("base");
     base.href = isLocal ? "/" : "/portfolio/"; // Change this to your repo name
     document.head.appendChild(base);
-  </script> -->
+  </script>
 
 
   <meta charset="UTF-8">
@@ -261,6 +261,24 @@
   <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
 
   <script src="./script.js"></script>
+
+  <script>
+    console.log('aaaa = ');
+    // Set base path depending on environment
+    // const isLoca = location.hostname === "localhost" || location.hostname === "127.0.0.1";
+    // base.href = isLocal ? "/" : "/portfolio/"; // Change this to your repo name
+    const basePath = isLocal ? "" : "/portfolio";
+    
+    // Fix all anchor links starting with "/"
+    document.querySelectorAll('a[href^="/"]').forEach(link => {
+      const originalHref = link.getAttribute('href');
+      console.log("basePath = ", basePath)
+      console.log('originalHref = ', originalHref);
+      link.setAttribute('href', basePath + originalHref);
+    });
+
+    
+  </script>
 
 </body>
 
