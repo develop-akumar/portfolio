@@ -82,6 +82,7 @@ var typed = new Typed(".typing-text", {
 // <!-- typed js effect ends -->
 
 async function fetchData(type = "skills") {
+    console.log('fetch data starts = ', );
     let response
     type === "skills" ?
         response = await fetch("skills.json")
@@ -92,6 +93,7 @@ async function fetchData(type = "skills") {
 }
 
 function showSkills(skills) {
+    console.log('%c showSkills ------starts', 'background: #222; color: #bada55');
     let skillsContainer = document.getElementById("skillsContainer");
     let skillHTML = "";
     skills.forEach(skill => {
@@ -107,6 +109,7 @@ function showSkills(skills) {
 }
 
 function showProjects(projects) {
+    console.log('%c showProjects ------starts', 'background: #222; color: #bada55');
     let projectsContainer = document.querySelector("#work .box-container");
     let projectHTML = "";
     projects.slice(0, 10).filter(project => project.category != "android").forEach(project => {
@@ -149,11 +152,12 @@ function showProjects(projects) {
 }
 
 fetchData().then(data => {
-    console.log('data = ', data);
+    console.log('skills data came = ', data);
     showSkills(data);
 });
 
 fetchData("projects").then(data => {
+    console.log('projects data came = ', );
     showProjects(data);
 });
 

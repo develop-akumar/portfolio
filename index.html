@@ -193,7 +193,7 @@
   <!-- education section ends -->
 
 
-  <!-- work project section starts -->
+  <!----------------------------- work project section starts ----------------------------->
   <section class="work" id="work">
 
     <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made</span></h2>
@@ -360,7 +360,7 @@
   <!-- contact section ends -->
 
 
-  <!-- footer section starts -->
+  <!-- footer section starts -------------------------------------------------------->
   <section class="footer">
 
     <div class="box-container">
@@ -448,8 +448,8 @@
     // Fix all anchor links starting with "/"
     document.querySelectorAll('a[href^="/"]').forEach(link => {
       const originalHref = link.getAttribute('href');
-      console.log("\n basePath = ", basePath)
       console.log('originalHref = ', originalHref);
+      console.log("\n basePath = ", basePath)
       console.log(' final path = ', basePath + originalHref );
       link.setAttribute('href', basePath + originalHref);
     });
